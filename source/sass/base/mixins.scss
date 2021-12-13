@@ -1,0 +1,79 @@
+// Typography
+@mixin title-font {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+@mixin base-font($font-size: 14px, $line-height: 18px) {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin description-font($font-size, $line-height) {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+}
+
+@mixin subtitle($font-size, $line-height, $padding) {
+  @include description-font($font-size, $line-height);
+  width: max-content;
+  position: relative;
+  text-transform: unset;
+  color: $title-font-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 15px;
+    left: -20px;
+    width: 100vw;
+    height: 2px;
+    background-color: $theme-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -$padding;
+    right: -$padding;
+    margin: auto;
+    background-color: $base-background-color;
+  }
+}
+
+.form__item {
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+// Buttons
+@mixin button {
+  @include description-font(16px, 20px);
+  display: inline-block;
+  color: $base-background-color;
+  background-color: $theme-color;
+  padding: 11px 0;
+  cursor: pointer;
+}
+
+// Wrappers
+@mixin mobile-wrapper {
+  min-width: 280px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+}

@@ -1,0 +1,9 @@
+.catalog {
+  @include mobile-wrapper;
+  margin-bottom: 50px;
+}
+
+.catalog__list {
+  display: grid;
+  gap: 45px;
+}

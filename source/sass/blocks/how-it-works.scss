@@ -1,0 +1,25 @@
+.how-it-works {
+  @include mobile-wrapper;
+  margin-bottom: 42px;
+}
+
+.how-it-works__title {
+  @include title-font;
+  color: $title-font-color;
+  margin-bottom: 38px;
+}
+
+.how-it-works__item::before {
+  content: "";
+  display: inline-block;
+  background-color: $theme-color;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.how-it-works__item {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+}

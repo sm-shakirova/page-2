@@ -1,0 +1,58 @@
+.product-card {
+  display: grid;
+  grid-template-areas:
+    "image info"
+    "button button";
+
+  &_show-more {
+    grid-template-areas:
+      "info"
+      "button";
+  }
+}
+
+.product-card__image {
+  grid-area: image;
+  margin: 0 auto;
+}
+
+.product-card__info {
+  grid-area: info;
+
+  &_show-more {
+    margin: 0 auto;
+  }
+}
+
+.product-card__title,
+.product-card__size {
+  @include description-font(16px, 20px);
+  color: $title-font-color;
+
+  &_show-more {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
+.product-card__size {
+  margin-bottom: 14px;
+}
+
+.product-card__description {
+  &_show-more {
+    text-align: center;
+  }
+}
+
+.product-card__button {
+  @include button;
+  grid-area: button;
+  margin-top: 15px;
+
+  &_show-more {
+    background-color: $footer-background-color;
+    color: $base-font-color;
+  }
+}
+

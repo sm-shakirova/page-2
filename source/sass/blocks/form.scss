@@ -1,0 +1,53 @@
+.form {
+  @include mobile-wrapper;
+  margin-bottom: 32px;
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.form__sub-block {
+  &:first-child {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    border-top: 1px solid $lines-color;
+    border-bottom: 1px solid $lines-color;
+    padding: 20px 0;
+  }
+}
+
+.form__legend {
+  @include subtitle(24px, 24px, 22px);
+  margin-bottom: 35px;
+}
+
+.form__item {
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  @include description-font(16px, 18px);
+  margin-right: 13px;
+}
+
+.form__input {
+  flex-grow: 1;
+}
+
+.form__button {
+  @include button;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form__info {
+  color: $title-font-color;
+  text-align: center;
+}

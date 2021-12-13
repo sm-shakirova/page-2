@@ -1,0 +1,7 @@
+.header {
+  @include description-font(20px, 20px);
+  font-weight: 500;
+  background-color: $base-background-color;
+  color: $title-font-color;
+  padding-top: 12px;
+}

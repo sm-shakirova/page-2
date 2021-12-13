@@ -1,0 +1,31 @@
+.address {
+  background-color: $base-background-color;
+
+  &_inner {
+    background-color: $footer-background-color;
+  }
+}
+
+.address__wrapper {
+  @include mobile-wrapper;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.address__block {
+  width: 49%;
+}
+
+.address__intro {
+  @include description-font(16px, 18px);
+  color: $title-font-color;
+}
+
+.address__item {
+  @include base-font(14px, 20px);
+}
+
+.address__map {
+  width: 100%;
+}

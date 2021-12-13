@@ -1,0 +1,23 @@
+.main-navigation {
+  @include mobile-wrapper;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-navigation__block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navigation__item {
+  width: 100%;
+}
+
+.main-navigation__link {
+  display: block;
+  text-align: center;
+  padding: 22px 0;
+  width: 100%;
+}

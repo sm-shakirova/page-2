@@ -1,0 +1,23 @@
+.before-after__photo {
+  margin: 0 auto 23px;
+}
+
+.before-after__range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  margin: 0 auto;
+}
+
+.before-after__button_before {
+  order: -1;
+}
+
+.before-after__button {
+  @include description-font(16px, 20px);
+  color: $title-font-color;
+  border: none;
+  background: none;
+  padding: 10px;
+}

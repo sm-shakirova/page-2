@@ -1,0 +1,57 @@
+.input {
+  @include description-font(16px, 18px);
+  color: $base-font-color;
+  padding: 10px 15px;
+  margin: 0;
+  border: 1px solid $input-border-color;
+
+  &_textarea {
+    height: 150px;
+  }
+}
+
+.input__control-mark {
+  display: block;
+  order: -1;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $control-mark-color;
+  margin-right: 15px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+  }
+
+  &_radio {
+    border-radius: 50%;
+
+    &::after {
+      background-color: $theme-color;
+      border-radius: 50%;
+    }
+  }
+
+  &_checkbox {
+    &::after {
+      background-image: url("../img/icons/checkbox-mark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.input:checked + .input__control-mark {
+  &::after {
+    display: block;
+  }
+}

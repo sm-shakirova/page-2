@@ -1,0 +1,39 @@
+.adds {
+  @include mobile-wrapper;
+}
+
+.adds__title {
+  @include subtitle(24px, 24px, 22px);
+  margin-bottom: 44px;
+}
+
+.adds__item {
+  display: grid;
+  grid-template-areas:
+    "product product"
+    "size price"
+    "button button";
+  margin-bottom: 30px;
+}
+
+.adds__product {
+  @include description-font(16px, 16px);
+  grid-area: product;
+  margin-bottom: 13px;
+}
+
+.adds__size {
+  grid-area: size;
+}
+
+.adds__price {
+  grid-area: price;
+  margin-left: auto;
+}
+
+.adds__button {
+  @include button;
+  grid-area: button;
+  width: 100%;
+  margin-top: 12px;
+}
