@@ -1,12 +1,29 @@
 .programs {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .programs__list {
-  @include mobile-wrapper;
+  @include wrapper;
   display: grid;
-  grid-template-rows: min-content / min-content;
+  grid-template-rows: repeat(auto-fill, min-content);
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(auto-fill, 570px);
+    gap: 80px;
+  }
 }
 
 .programs__item {
@@ -14,6 +31,14 @@
   flex-direction: column;
   background-color: $footer-background-color;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 60px 50px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 50px 55px;
+  }
 }
 
 .programs__title::before {
@@ -32,15 +57,26 @@
   margin-bottom: 22px;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    @include description-font(36px, 36px);
+  }
 }
 
 .programs__description {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include base-font(16px, 24px);
+  }
 }
 
 .programs__link {
   @include description-font(16px, 16px);
   color: $title-font-color;
   display: inline-block;
-  padding: 11px 0;
+
+  @media (min-width: $tablet-width) {
+    @include description-font(20px, 30px);
+  }
 }

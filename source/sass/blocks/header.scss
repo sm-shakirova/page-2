@@ -1,7 +1,66 @@
 .header {
   @include description-font(20px, 20px);
   font-weight: 500;
-  background-color: $base-background-color;
   color: $title-font-color;
+
+  @media (min-width: $tablet-width) {
+    @include description-font(18px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include description-font(20px, 30px);
+  }
+}
+
+.header__wrapper {
+  @include wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.header__block {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
   padding-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.header__logo_text {
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__toggle {
+  width: 24px;
+  height: 24px;
+  justify-self: end;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__navigation {
+  &theme {
+    @media (min-width: $desktop-width) {
+      background-color: $theme-color;
+      color: $base-background-color;
+    }
+  }
 }

@@ -3,29 +3,81 @@
 
   &_inner {
     background-color: $footer-background-color;
+
+    @media (min-width: $desktop-width) {
+      background-color: $base-background-color;
+    }
   }
 }
 
 .address__wrapper {
-  @include mobile-wrapper;
-  display: flex;
-  justify-content: space-between;
-  padding: 28px 0;
+  @include wrapper;
+  position: relative;
 }
 
-.address__block {
-  width: 49%;
+.address__content {
+  background-color: $base-background-color;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 28px 0;
+
+  &_inner {
+    background-color: $footer-background-color;
+
+    @media (min-width: $desktop-width) {
+      background-color: $base-background-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 80px;
+    padding: 65px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    margin: auto;
+    padding: 70px;
+  }
+}
+
+.address__block:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: start;
+  }
 }
 
 .address__intro {
   @include description-font(16px, 18px);
   color: $title-font-color;
+
+  @media (min-width: $tablet-width) {
+    @include description-font(20px, 21px);
+  }
 }
 
 .address__item {
   @include base-font(14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include base-font(16px, 20px);
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
 }
 
 .address__map {
-  width: 100%;
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }

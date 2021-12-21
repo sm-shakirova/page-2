@@ -11,10 +11,15 @@ $blocks-background-color: #eaeaea;
 $base-font-color: #444444;
 $title-font-color: #000000;
 
-
-// Other
+// Other colors
 $table-border-color: #c4c4c4;
 $input-border-color: #e7e7e7;
 $control-mark-color: #cdcdcd;
 $lines-color: #d9d9d9;
 $icons-fill-color: #666666;
+
+// Viewports
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

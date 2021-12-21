@@ -4,6 +4,14 @@
     "image info"
     "button button";
 
+  @media (min-width: $tablet-width) {
+    height: 511px;
+    grid-template-areas:
+      "image"
+      "info"
+      "button";
+  }
+
   &_show-more {
     grid-template-areas:
       "info"
@@ -46,13 +54,12 @@
 }
 
 .product-card__button {
-  @include button;
+  @include button(10px, 20px);
   grid-area: button;
-  margin-top: 15px;
+  margin-top: auto;
 
   &_show-more {
     background-color: $footer-background-color;
     color: $base-font-color;
   }
 }
-

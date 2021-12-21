@@ -1,9 +1,17 @@
 .adds {
-  @include mobile-wrapper;
+  @include wrapper;
+}
+
+.adds__block {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+    align-items: center;
+  }
 }
 
 .adds__title {
-  @include subtitle(24px, 24px, 22px);
   margin-bottom: 44px;
 }
 
@@ -14,6 +22,18 @@
     "size price"
     "button button";
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "product size price"
+      "button button button";
+    grid-template-columns: 1fr 200px 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas: "product size price button";
+    grid-template-columns: 1fr 200px 155px 282px;
+  }
 }
 
 .adds__product {
@@ -24,6 +44,14 @@
 
 .adds__size {
   grid-area: size;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .adds__price {
@@ -32,8 +60,12 @@
 }
 
 .adds__button {
-  @include button;
+  @include button(10px, 20px);
   grid-area: button;
   width: 100%;
-  margin-top: 12px;
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    margin-left: auto;
+  }
 }

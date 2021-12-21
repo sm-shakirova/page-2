@@ -1,6 +1,6 @@
 .socials {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(3, max-content);
   gap: 16px;
 }
 

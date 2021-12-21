@@ -2,28 +2,29 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Функциональное питание для котов "Кэт Энерджи"</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-<header class="header">
-  <nav class="main-navigation">
-    <div class="main-navigation__block">
-      <a class="main-navigation__logo">
-        <img src="img/logo/logo-mobile.svg" width="33" height="37" alt="Кэт Энерджи">
-      </a>
-      <a class="main-navigation__logo">
-        <img src="img/logo/logo-text-only.svg" width="101" height="18" alt="Кэт Энерджи">
-      </a>
-      <button class="main-navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-    </div>
-    <ul class="main-navigation__list list">
-      <li class="main-navigation__item">
+<header class="header header__wrapper">
+  <div class="header__block">
+    <a class="header__logo" href="index.html">
+      <img src="img/logo/logo-mobile.svg" width="33" height="37" alt="Кэт Энерджи">
+    </a>
+    <a class="header__logo_text">
+      <img src="img/logo/logo-text-only.svg" width="101" height="18" alt="Кэт Энерджи">
+    </a>
+    <button class="header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+  </div>
+  <nav class="header__navigation main-navigation">
+    <ul class="main-navigation__list">
+      <li class="main-navigation__item main-navigation__item_current">
         <a class="main-navigation__link" href="index.html">Главная</a>
       </li>
-      <li class="main-navigation__item main-navigation__item_current">
+      <li class="main-navigation__item">
         <a class="main-navigation__link">Каталог продукции</a>
       </li>
       <li class="main-navigation__item">
@@ -33,9 +34,9 @@
   </nav>
 </header>
 <main class="main">
-  <section class="inner-header">
+  <header class="inner-header">
     <h1 class="inner-header__title">Каталог продукции</h1>
-  </section>
+  </header>
   <section class="catalog">
     <h2 class="visually-hidden">Список товаров</h2>
     <ul class="catalog__list">
@@ -203,8 +204,8 @@
     </ul>
   </section>
   <section class="adds">
-    <h2 class="adds__title">Дополнительная товары</h2>
-    <div class="adds__wrapper">
+    <h2 class="adds__title">Дополнительные товары</h2>
+    <div class="adds__block">
       <ul class="adds__list">
         <li class="adds__item">
           <h3 class="adds__product">Сахарозаменитель</h3>
@@ -247,21 +248,23 @@
 <footer class="footer">
   <div class="address address_inner">
     <div class="address__wrapper">
-      <div class="address__block">
-        <p class="address__intro">
-          Приглашаем
-          к сотрудничеству
-          дилеров!
-        </p>
-      </div>
-      <div class="address__block">
-        <p class="address__item">
-          ул. Большая
-          Конюшенная, д. 19/8
-        </p>
-        <p class="address__item">
-          Санкт-Петербург
-        </p>
+      <div class="address__content address__content_inner">
+        <div class="address__block">
+          <p class="address__intro">
+            Приглашаем<br>
+            к сотрудничеству<br>
+            дилеров!
+          </p>
+        </div>
+        <div class="address__block">
+          <p class="address__item">
+            ул. Большая<br>
+            Конюшенная, д. 19/8
+          </p>
+          <p class="address__item">
+            Санкт-Петербург
+          </p>
+        </div>
       </div>
     </div>
     <img class="address__map" src="img/map/map.jpg" width="320" height="362" alt="Карта Санкт-Петербурга">

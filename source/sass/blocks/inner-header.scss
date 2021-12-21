@@ -1,0 +1,28 @@
+.inner-header {
+  @include wrapper;
+  color: $title-font-color;
+  margin-top: 27px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+}
+
+.inner-header__title {
+  @include title-font;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(60px, 60px);
+  }
+}
+
+.inner-header__description {
+  @include description-font(14px, 18px);
+  margin-top: 37px;
+
+  @media (min-width: $tablet-width) {
+    @include description-font(20px, 30px);
+    margin-top: 55px;
+  }
+}

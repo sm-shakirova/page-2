@@ -1,23 +1,24 @@
 .main-navigation {
-  @include mobile-wrapper;
+  width: 100%;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    width: max-content;
+  }
+}
+
+.main-navigation__list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-}
-
-.main-navigation__block {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-}
 
-.main-navigation__item {
-  width: 100%;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .main-navigation__link {
   display: block;
-  text-align: center;
-  padding: 22px 0;
-  width: 100%;
+  padding: 22px 18px;
 }

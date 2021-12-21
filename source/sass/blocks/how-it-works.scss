@@ -1,5 +1,5 @@
 .how-it-works {
-  @include mobile-wrapper;
+  @include wrapper;
   margin-bottom: 42px;
 }
 
@@ -7,19 +7,48 @@
   @include title-font;
   color: $title-font-color;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(60px, 60px);
+    margin-bottom: 70px;
+  }
 }
 
-.how-it-works__item::before {
-  content: "";
-  display: inline-block;
-  background-color: $theme-color;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+.how-it-works__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    column-gap: 135px;
+    row-gap: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 75px;
+  }
 }
 
 .how-it-works__item {
   margin-bottom: 22px;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+  }
+
+  &::before {
+    content: "";
+    background-color: $theme-color;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
+
