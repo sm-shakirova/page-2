@@ -1,11 +1,15 @@
 .product-card {
+  position: relative;
   display: grid;
   grid-template-areas:
     "image info"
     "button button";
 
   @media (min-width: $tablet-width) {
-    height: 511px;
+    min-height: 430px;
+    padding: 0 36px 40px;
+    margin-top: 81px;
+    background-color: $footer-background-color;
     grid-template-areas:
       "image"
       "info"
@@ -16,12 +20,45 @@
     grid-template-areas:
       "info"
       "button";
+
+    @media (min-width: $tablet-width) {
+      background-color: $base-background-color;
+      border: 2px solid $footer-background-color;
+    }
+  }
+}
+
+.product-card__container {
+  grid-area: image;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 112px;
+
+  @media (min-width: $tablet-width) {
+    height: 204px;
+    margin-top: -81px;
+    margin-bottom: 28px;
   }
 }
 
 .product-card__image {
-  grid-area: image;
-  margin: 0 auto;
+  width: 84px;
+  transform: translateY(10px);
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+  }
+
+  &_small {
+    width: 68px;
+    transform: translateY(-5px);
+
+    @media (min-width: $tablet-width) {
+      width: 161px;
+      transform: none;
+    }
+  }
 }
 
 .product-card__info {
@@ -29,37 +66,132 @@
 
   &_show-more {
     margin: 0 auto;
+    padding-top: 59px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 160px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      left: calc(50% - 15px);
+      top: 40px;
+      background-color: $medium-line-color;
+
+      @media (min-width: $tablet-width) {
+        width: 60px;
+        left: calc(50% - 30px);
+        top: 80px;
+      }
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
   }
 }
 
 .product-card__title,
 .product-card__size {
-  @include description-font(16px, 20px);
-  color: $title-font-color;
+  @include title-font(16px, 20px);
+  text-transform: uppercase;
+  color: $special-font-color;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(20px, 24px);
+    text-align: center;
+  }
 
   &_show-more {
     text-align: center;
     margin-bottom: 8px;
+
+    & br {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
 }
 
 .product-card__size {
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .product-card__description {
+  @include base-font(12px, 16px);
+
   &_show-more {
     text-align: center;
+    margin-bottom: 10px;
+
+    & br {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
+}
+
+.product-card__table {
+  @include base-font(12px, 16px);
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    @include base-font(16px, 16px);
+  }
+}
+
+.product-card__table-row {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    padding: 7px 0;
+    border-bottom: 1px solid $control-mark-color;
+  }
+}
+
+.product-card__value {
+  margin-left: auto;
+  text-align: end;
 }
 
 .product-card__button {
   @include button(10px, 20px);
+  @include title-font(16px, 20px);
+  text-transform: uppercase;
   grid-area: button;
-  margin-top: auto;
+  margin-top: 13px;
+  align-self: end;
 
-  &_show-more {
-    background-color: $footer-background-color;
-    color: $base-font-color;
+  @media (min-width: $tablet-width) {
+    margin-top: 33px;
+  }
+}
+
+.product-card__button_show-more {
+  background-color: $footer-background-color;
+  color: $base-font-color;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-button-color;
+  }
+
+  &:active {
+    background-color: $secondary-button-color;
+    color: rgba($base-font-color, 0.3);
   }
 }

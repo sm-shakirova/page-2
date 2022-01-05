@@ -1,11 +1,19 @@
 .inner-header {
   @include wrapper;
+  @include dividing-line-before;
   color: $title-font-color;
-  margin-top: 27px;
+  padding-top: 27px;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 55px;
     margin-bottom: 66px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    padding: 0;
   }
 }
 
@@ -18,11 +26,12 @@
 }
 
 .inner-header__description {
-  @include description-font(14px, 18px);
+  @include title-font(14px, 18px);
+  text-transform: uppercase;
   margin-top: 37px;
 
   @media (min-width: $tablet-width) {
-    @include description-font(20px, 30px);
+    @include title-font(20px, 30px);
     margin-top: 55px;
   }
 }

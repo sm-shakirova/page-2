@@ -1,5 +1,5 @@
 // Typography
-@mixin title-font($font-size: 36px, $line-height: 36px) {
+@mixin title-font($font-size: 36px, $line-height: 40px) {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -15,50 +15,61 @@
   line-height: $line-height;
 }
 
-@mixin description-font($font-size, $line-height) {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-  text-transform: uppercase;
-}
-
-@mixin legend-line($padding) {
-  width: max-content;
+// Lines
+@mixin sub-title-line($shift) {
+  display: block;
+  width: 100%;
   position: relative;
-  color: $title-font-color;
 
-  /*
   &::before {
     content: "";
     position: absolute;
     z-index: -2;
-    top: 15px;
-    left: -20px;
+    top: $shift;
+    left: calc(50% - 50vw);
+    margin: auto;
     width: 100vw;
     height: 2px;
     background-color: $theme-color;
   }
+}
+
+@mixin dividing-line-before($color: $light-line-color) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 50vw);
+    top: 0;
+    margin: auto;
+    height: 1px;
+    width: 100vw;
+    background-color: $color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+@mixin dividing-line-after($color: $light-line-color) {
+  position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
-    top: 0;
+    left: calc(50% - 50vw);
     bottom: 0;
-    left: -$padding;
-    right: -$padding;
     margin: auto;
-    background-color: $base-background-color;
-  }
-   */
-}
+    height: 1px;
+    width: 100vw;
+    background-color: $color;
 
-.form__item {
-  margin-bottom: 13px;
-  display: flex;
-  align-items: center;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 // Button
@@ -68,18 +79,36 @@
   background-color: $theme-color;
   padding: $padding-x $padding-y;
   cursor: pointer;
+
+  &:hover {
+    background-color: $dark-theme-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $dark-theme-color;
+  }
+
+  &:active {
+    background-color: $dark-theme-color;
+    color: rgba($base-background-color, 0.3);
+  }
 }
 
 // Wrapper
 @mixin wrapper {
-  width: 280px;
-  margin: 0 auto;
+  margin: 0 20px;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
+    margin: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
+    margin: 0 110px;
+  }
+
+  @media (min-width: 1770px) {
+    width: 1660px;
+    margin: 0 auto;
   }
 }

@@ -1,13 +1,44 @@
 .socials {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 16px;
+  gap: 30px;
 }
 
-.socials__link {
-  display: block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #666666;
-  padding: 10px;
+.socials__item {
+  width: 23px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 33px;
+    height: 33px;
+  }
+
+  &_vk {
+    background-image: url("../img/socials/vk.svg");
+    background-size: 22px 12px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 29px 17px;
+    }
+  }
+
+  &_ig {
+    background-image: url("../img/socials/ig.svg");
+    background-size: 16px 16px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 23px;
+    }
+  }
+
+  &_fb {
+    background-image: url("../img/socials/fb.svg");
+    background-size: 10px 18px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 13px 27px;
+    }
+  }
 }

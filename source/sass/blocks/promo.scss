@@ -14,13 +14,13 @@
 
   @media (min-width: $tablet-width) {
     text-align: unset;
-    min-height: 800px;
-    padding: 60px 100px 10px;
+    min-height: 900px;
+    padding: 60px 100px 0;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 490px;
-    padding: 110px 80px 54px;
+    min-height: 522px;
+    padding: 100px 80px 195px;
     margin-bottom: 82px;
   }
 }
@@ -36,38 +36,54 @@
 }
 
 .promo__description {
-  @include description-font(14px, 14px);
+  @include title-font(14px, 14px);
+  text-transform: uppercase;
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    @include description-font(20px, 20px);
+    @include title-font(20px, 20px);
     margin-bottom: 50px;
   }
 }
 
 .promo__image {
   margin: 0 auto;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -1;
-    display: none;
+    width: 709px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -20px;
+    left: 230px;
+    width: 552px;
   }
 }
 
 .promo__link {
   @include button(14px, 26px);
-  @include description-font(14px, 18px);
+  @include title-font(14px, 18px);
+  text-transform: uppercase;
   text-align: center;
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    @include description-font(20px, 20px);
+    @include title-font(20px, 20px);
     width: max-content;
   }
 }
 
 .promo__background {
+  $mobile-photo-width: 563px;
+  $top-shift: -122px;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -77,8 +93,8 @@
   background-color: $theme-color;
   background-image: url("../img/background/cat-photo.jpg");
   background-repeat: no-repeat;
-  background-size: 563px;
-  background-position: top 35% left 65%;
+  background-size: $mobile-photo-width;
+  background-position: top 50% left 65%;
 
   &::after {
     content: "";
@@ -90,7 +106,30 @@
     background-color: rgba($theme-color, 0.85);
   }
 
+  @media (min-width: 375px) {
+    background-position: top 55% left 70%;
+  }
+
+  @media (min-width: 425px) {
+    background-position: top 55% left 75%;
+  }
+
+  @media (min-width: $mobile-photo-width) {
+    background-size: cover;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 50%;
+    height: 696px;
+    top: $top-shift;
+    left: 50%;
+    right: 0;
+    background-size: cover;
+    background-position: top 55% left;
   }
 }

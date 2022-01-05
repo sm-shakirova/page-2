@@ -1,25 +1,30 @@
 // Theme
 $theme-color: #68b738;
+$dark-theme-color: #5eaa2f;
 $status-error: #ff8282;
 
 // Background
 $base-background-color: #ffffff;
 $footer-background-color: #f2f2f2;
-$blocks-background-color: #eaeaea;
+$block-background-color: #eaeaea;
 
 // Font
 $base-font-color: #444444;
+$special-font-color: #222222;
 $title-font-color: #000000;
 
 // Other colors
 $table-border-color: #c4c4c4;
 $input-border-color: #e7e7e7;
+$dark-border-color: #bababa;
 $control-mark-color: #cdcdcd;
-$lines-color: #d9d9d9;
+$light-line-color: #e6e6e6;
+$medium-line-color: #d3d3d3;
+$dark-line-color: #d9d9d9;
 $icons-fill-color: #666666;
+$secondary-button-color: #ebebeb;
 
 // Viewports
-
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;

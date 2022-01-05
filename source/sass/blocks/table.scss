@@ -1,5 +1,62 @@
 .table {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+    gap: 42px;
+  }
+}
+
+.table__item {
+  position: relative;
+}
+
+.table__value {
+  @include title-font(24px, 24px);
+  text-transform: uppercase;
+  color: $title-font-color;
+  padding: 14px 0 17px;
+  text-align: center;
+  border: 1px solid $control-mark-color;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(30px, 37px);
+    padding: 15px 0 20px;
+  }
+}
+
+.table__description {
+  @include base-font(12px, 12px);
+  background-color: $block-background-color;
+  position: absolute;
+  width: min-content;
+  text-align: center;
+  padding: 8px;
+  right: 0;
+  top: 42px;
+  left: 0;
+  margin: auto;
+
+  @media (min-width: 375px) {
+    width: max-content;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include base-font(14px, 14px);
+    top: 56px;
+    background-color: $base-background-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $block-background-color;
+  }
+
+  @media (min-width: $desktop-width + 1000px) {
+    line-height: 18px;
+    width: min-content;
+  }
 }

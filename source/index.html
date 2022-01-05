@@ -15,11 +15,11 @@
       <a class="header__logo_text">
         <img src="img/logo/logo-text-only.svg" width="101" height="18" alt="Кэт Энерджи">
       </a>
-      <button class="header__toggle" type="button">
+      <button class="header__toggle main-navigation__toggle main-navigation__toggle_nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="header__navigation header__navigation_theme main-navigation">
+    <nav class="header__navigation main-navigation main-navigation_closed main-navigation_nojs">
       <ul class="main-navigation__list">
         <li class="main-navigation__item main-navigation__item_current">
           <a class="main-navigation__link">Главная</a>
@@ -47,7 +47,7 @@
       <h2 class="visually-hidden">Выбор программы</h2>
       <ul class="programs__list">
         <li class="programs__item">
-          <h3 class="programs__title program-types__title_slim">Похудение</h3>
+          <h3 class="programs__title programs__title_slim">Похудение</h3>
           <p class="programs__description">
             Ваш кот весит больше собаки и почти утратил способность
             лазить по деревьям? Пора на диету! Cat Energy Slim поможет
@@ -58,13 +58,13 @@
           </a>
         </li>
         <li class="programs__item">
-          <h3 class="programs__title program-types__title_pro">Набор массы</h3>
+          <h3 class="programs__title programs__title_pro">Набор массы</h3>
           <p class="programs__description">
             Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!
           </p>
-          <a class="programs__link description" href="catalog.html">
+          <a class="programs__link" href="catalog.html">
             Каталог Pro
           </a>
         </li>
@@ -107,31 +107,43 @@
           </p>
           <div class="example__block">
             <div class="example__list table">
-              <div class="table__item">
+              <dl class="table__item">
                 <dt class="table__value">5 кг</dt>
                 <dd class="table__description">снижение веса</dd>
-              </div>
-              <div class="table__item">
+              </dl>
+              <dl class="table__item">
                 <dt class="table__value">60 дней</dt>
                 <dd class="table__description">затрачено времени</dd>
-              </div>
+              </dl>
             </div>
-            <p class="example__price">Затраты на питание: 15 000 руб.</p>
+            <p class="example__price">
+              Затраты на питание:
+              <span class="example__span">15 000 руб.</span>
+            </p>
           </div>
         </div>
         <div class="example__image before-after">
           <div class="before-after__photos">
-            <img class="before-after__photo before-after__photo-before" src="img/before-after/cat-fat.png"
-                 width="311" height="232" alt="Толстый кот">
-            <img class="visually-hidden before-after__photo-after" src="img/before-after/cat-skinny.png"
-                 width="311" height="232" alt="Худой кот">
+            <div class="before-after__photo">
+              <img class="before-after__photo_before" src="img/before-after/cat-fat.png"
+                   width="311" height="232" alt="Толстый кот">
+            </div>
+            <div class="before-after__photo">
+              <img class="before-after__photo_after" src="img/before-after/cat-skinny.png"
+                   width="311" height="232" alt="Худой кот">
+            </div>
           </div>
-          <label class="before-after__range">
-            <span class="visually-hidden">Посмотреть изменения</span>
-            <input class="before-after__input" type="range">
+          <div class="before-after__block">
+            <label class="visually-hidden" for="before-after">Посмотреть изменения</label>
             <button class="before-after__button before-after__button_before" type="button">Было</button>
+            <div class="before-after__range">
+              <div class="before-after__container">
+                <span class="before-after__progress-bar" style="width: 50%;"></span>
+              </div>
+              <input class="before-after__input" id="before-after" type="range" value="50">
+            </div>
             <button class="before-after__button before-after__button_after" type="button">Стало</button>
-          </label>
+          </div>
         </div>
       </div>
     </section>
@@ -158,7 +170,9 @@
           </div>
         </div>
       </div>
-      <img class="address__map" src="img/map/map.jpg" width="320" height="362" alt="Карта Санкт-Петербурга">
+      <div class="address__map">
+        <img src="img/map/map.jpg" width="320" height="362" alt="Карта Санкт-Петербурга">
+      </div>
     </div>
     <div class="footer__block">
       <div class="footer__item">
@@ -191,5 +205,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
   </body>
 </html>

@@ -16,6 +16,7 @@
 }
 
 .address__content {
+  z-index: 1;
   background-color: $base-background-color;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44,6 +45,12 @@
   }
 }
 
+.address__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .address__block:nth-child(2) {
   @media (min-width: $tablet-width) {
     justify-self: end;
@@ -55,11 +62,12 @@
 }
 
 .address__intro {
-  @include description-font(16px, 18px);
+  @include title-font(16px, 20px);
+  text-transform: uppercase;
   color: $title-font-color;
 
   @media (min-width: $tablet-width) {
-    @include description-font(20px, 21px);
+    @include title-font(20px, 26px);
   }
 }
 
@@ -77,7 +85,46 @@
 }
 
 .address__map {
+  min-width: 100vw;
+  height: 362px;
+  position: relative;
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     height: 400px;
+  }
+}
+
+.address__map img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.address__map::after {
+  content: "";
+  background-image: url("../img/map/pin.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 106px;
+    height: 106px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 40%;
   }
 }

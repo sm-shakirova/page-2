@@ -1,5 +1,39 @@
 .adds {
   @include wrapper;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.adds__wrapper {
+  @include sub-title-line(14px);
+
+  @media (min-width: $tablet-width) {
+    @include sub-title-line(22px);
+  }
+}
+
+.adds__title {
+  @include title-font(24px, 24px);
+  color: $title-font-color;
+  background-color: $base-background-color;
+  width: max-content;
+  padding: 0 20px;
+  transform: translateX(-20px);
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(36px, 36px);
+    padding: 0 40px;
+    transform: none;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(-40px);
+  }
 }
 
 .adds__block {
@@ -7,12 +41,19 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 80px;
-    align-items: center;
   }
 }
 
-.adds__title {
-  margin-bottom: 44px;
+.adds__list {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .adds__item {
@@ -21,25 +62,53 @@
     "product product"
     "size price"
     "button button";
-  margin-bottom: 30px;
+  padding: 13px 0 19px;
+  border-bottom: 1px solid $control-mark-color;
 
   @media (min-width: $tablet-width) {
     grid-template-areas:
       "product size price"
       "button button button";
     grid-template-columns: 1fr 200px 95px;
+    align-items: center;
+    padding: 26px 38px 28px;
+    border-right: 1px solid $control-mark-color;
+    border-left: 1px solid $control-mark-color;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-areas: "product size price button";
     grid-template-columns: 1fr 200px 155px 282px;
+    padding: 15px 0 16px;
+    border-right: none;
+    border-left: none;
+  }
+
+  &:first-child {
+    border-top: 1px solid $control-mark-color;
   }
 }
 
-.adds__product {
-  @include description-font(16px, 16px);
+.adds__product-name {
+  @include title-font(16px, 16px);
+  color: $special-font-color;
+  text-transform: uppercase;
   grid-area: product;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(20px, 20px);
+    margin-bottom: 0;
+  }
+}
+
+.adds__size,
+.adds__price {
+  @include base-font(14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include base-font(16px, 20px);
+  }
 }
 
 .adds__size {
@@ -61,11 +130,15 @@
 
 .adds__button {
   @include button(10px, 20px);
+  @include title-font(16px, 20px);
+  text-transform: uppercase;
   grid-area: button;
   width: 100%;
+  margin-top: 15px;
 
   @media (min-width: $desktop-width) {
     width: 244px;
+    margin-top: 0;
     margin-left: auto;
   }
 }
