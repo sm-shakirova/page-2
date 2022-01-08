@@ -4,41 +4,57 @@
 
 .footer__block {
   @include wrapper;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 87px 63px 78px;
+  align-items: end;
+  justify-items: center;
+  padding-top: 8px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-rows: unset;
+    grid-template-columns: 200px 1fr 200px;
     padding: 55px 0;
     align-items: center;
   }
 }
 
 .footer__item {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
+  padding-bottom: 11px;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+  }
+
+  &:first-child {
+    padding-bottom: 32px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 22px;
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
   }
 }
 
 .footer__item:first-child {
-  padding: 5px 0 10px;
-
   @media (min-width: $tablet-width) {
     width: 200px;
     justify-content: flex-start;
-    margin-left: 0;
   }
 }
 
 .footer__item:not(:last-child) {
-  display: flex;
-  justify-content: center;
   position: relative;
 
   &::after {
@@ -56,17 +72,9 @@
   }
 }
 
-.footer__item:nth-child(2) {
-  padding: 20px 0;
-}
-
 .footer__item:last-child {
-  padding: 22px 0;
-
   @media (min-width: $tablet-width) {
-    width: 200px;
     justify-content: flex-end;
-    margin-right: 0;
   }
 
   &::after {
@@ -74,9 +82,21 @@
   }
 }
 
-.footer__logo {
-  margin-top: 30px;
-  margin-bottom: 22px;
+.footer__logo-link {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__copyright {
@@ -84,21 +104,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer__copyright::after {
-  content: "";
-  display: block;
-  margin-left: auto;
-  width: 27px;
-  height: 34px;
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 
   @media (min-width: $tablet-width) {
-    margin-left: 22px;
+    justify-content: flex-end;
+  }
+
+  & svg {
+    fill: $icons-fill-color;
+    margin-left: auto;
+    width: 27px;
+    height: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 22px;
+    }
+  }
+
+  &:hover svg,
+  &:focus svg,
+  &:active svg {
+    fill: $theme-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
-

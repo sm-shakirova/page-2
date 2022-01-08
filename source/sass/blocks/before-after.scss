@@ -1,5 +1,6 @@
 .before-after__photos {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -50,7 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 0 30px;
 }
 
@@ -60,27 +61,39 @@
   color: $title-font-color;
   border: none;
   background: none;
-  padding: 10px 13px;
+  padding: 6px 13px;
   position: relative;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
-    padding: 10px 20px;
+  &:focus {
+    outline: none;
   }
+}
 
-  &:hover::after {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: calc(100% - 26px);
-    height: 1px;
-    opacity: 0.24;
+@media (min-width: $tablet-width) {
+  .before-after__button {
+    padding: 6px 20px;
 
-    @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      background-image: url("../img/icons/underline.svg");
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 1px;
       width: calc(100% - 40px);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: none;
+      background-color: rgba($title-font-color, 0.4);
+    }
+
+    &:active::after {
+      display: none;
     }
   }
 }
@@ -167,5 +180,34 @@
     border-radius: 50%;
     box-shadow: 0 0 0 1px $control-mark-color,
       0 2px 3px 0 rgba(#000000, 0.16);
+  }
+}
+
+.before-after__input:hover {
+  &::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px $control-mark-color,
+      0 3px 4px 0 rgba(#000000, 0.19);
+  }
+
+  &::-moz-range-thumb {
+    box-shadow: 0 0 0 1px $control-mark-color,
+      0 3px 4px 0 rgba(#000000, 0.19);
+  }
+}
+
+.before-after__input:focus {
+  outline: none;
+}
+
+.before-after__input:focus,
+.before-after__input:active {
+  &::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px $theme-color,
+      0 4px 5px 0 rgba(#000000, 0.19);
+  }
+
+  &::-moz-range-thumb {
+    box-shadow: 0 0 0 1px $theme-color,
+      0 4px 5px 0 rgba(#000000, 0.19);
   }
 }

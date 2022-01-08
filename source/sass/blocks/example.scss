@@ -36,6 +36,12 @@
   }
 }
 
+.example__content {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
+}
+
 .example__block {
   @media (min-width: $tablet-width) {
     display: flex;
@@ -127,7 +133,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    transform: translate(40px, -60px);
-    margin-top: 0;
+    transform: translate(40px, -42px);
+    margin-top: -42px;
   }
 }

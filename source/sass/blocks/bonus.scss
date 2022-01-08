@@ -1,22 +1,37 @@
 .bonus {
-  width: 100%;
-  height: 290px;
-  background-image: url("../img/background/bonus.jpg");
   background-color: $theme-color;
   color: $base-background-color;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 290px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/background/bonus-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bonus-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     height: 200px;
+    background-image: url("../img/background/bonus-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bonus-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    height: 290px;
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/background/bonus-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bonus-desktop@2x.jpg");
+    }
   }
 }
 

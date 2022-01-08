@@ -107,9 +107,6 @@
 
 .address__map::after {
   content: "";
-  background-image: url("../img/map/pin.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
   width: 53px;
   height: 53px;
   position: absolute;
@@ -118,10 +115,22 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../img/map/pin-mobile.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map/pin-mobile@2x.png");
+  }
 
   @media (min-width: $tablet-width) {
     width: 106px;
     height: 106px;
+    background-image: url("../img/map/pin.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/pin@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {

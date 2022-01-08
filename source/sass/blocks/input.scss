@@ -42,6 +42,48 @@
   &_error {
     border: 2px solid $status-error;
     padding: 14px;
+
+    & + .input__icon {
+      fill: $status-error;
+    }
+
+    & + .input__icon_email {
+      fill: none;
+      stroke: $status-error;
+    }
+  }
+}
+
+.input_with-icon {
+  padding-right: 45px;
+
+  &:focus {
+    padding-right: 45px;
+  }
+
+  &:focus + .input__icon {
+    fill: $theme-color;
+  }
+
+  &:focus + .input__icon_email {
+    fill: none;
+    stroke: $theme-color;
+  }
+}
+
+.input__icon {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  fill: $special-font-color;
+
+  &_email {
+    fill: none;
+    stroke: $special-font-color;
   }
 }
 
@@ -73,26 +115,6 @@
   margin-right: 13px;
   display: flex;
   align-items: center;
-}
-
-.input__icon {
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 15px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
-  &_email {
-    background-image: url("../img/icons/email.svg");
-  }
-
-  &_phone {
-    background-image: url("../img/icons/phone.svg");
-  }
 }
 
 .input__control-mark {
