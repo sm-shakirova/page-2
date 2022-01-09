@@ -177,6 +177,22 @@
   }
 }
 
+.programs__arrow-icon {
+  margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 28px;
+  }
+
+  &_long {
+    display: none;
+  }
+}
+
 .programs__link {
   @include title-font(16px, 16px);
   text-transform: uppercase;
@@ -190,42 +206,30 @@
     @include title-font(20px, 30px);
   }
 
+  &:hover .programs__arrow-icon {
+    &_short {
+      display: none;
+    }
+
+    &_long {
+      display: block;
+    }
+  }
+
   &:focus {
     outline: none;
     color: rgba($title-font-color, 0.3);
   }
 
+  &:focus .programs__arrow-icon {
+    opacity: 0.3;
+  }
+
   &:active {
     color: rgba($title-font-color, 0.3);
   }
-}
 
-.programs__link::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 12px;
-  background-image: url("../img/icons/arrow.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-left: 15px;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 25px;
+  &:active .programs__arrow-icon {
+    opacity: 0.3;
   }
-
-  @media (min-width: $desktop-width) {
-    width: 25px;
-    margin-left: 28px;
-  }
-}
-
-.programs__link:hover::after {
-  background-image: url("../img/icons/long-arrow.svg");
-  width: 32px;
-}
-
-.programs__link:focus::after,
-.programs__link:active::after {
-  opacity: 0.3;
 }

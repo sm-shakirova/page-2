@@ -161,6 +161,7 @@
   }
 
   .before-after__input::-webkit-slider-thumb {
+    cursor: pointer;
     width: 8px;
     height: 8px;
     background-color: $theme-color;
@@ -172,6 +173,7 @@
   }
 
   .before-after__input::-moz-range-thumb {
+    cursor: pointer;
     width: 8px;
     height: 8px;
     background-color: $theme-color;

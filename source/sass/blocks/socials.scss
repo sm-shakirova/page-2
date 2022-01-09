@@ -4,20 +4,6 @@
   gap: 11px;
 }
 
-.socials__item {
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &_vk {
-    background-image: url("../img/socials/vk.svg");
-    background-size: 22px 12px;
-
-    @media (min-width: $tablet-width) {
-      background-size: 29px 17px;
-    }
-  }
-}
-
 .socials__link {
   width: 40px;
   height: 40px;
@@ -33,11 +19,7 @@
   &:hover .socials__icon,
   &:focus .socials__icon {
     fill: $theme-color;
-
-    &_fb {
-      fill: none;
-      stroke: $theme-color;
-    }
+    stroke: $theme-color;
   }
 
   &:focus {
@@ -46,44 +28,33 @@
 
   &:active .socials__icon {
     fill: $theme-color;
+    stroke: $theme-color;
     opacity: 0.3;
-
-    &_fb {
-      fill: none;
-      stroke: $theme-color;
-    }
   }
 }
 
 .socials__icon {
   fill: $icons-fill-color;
-
-  &_vk {
-    width: 22px;
-    height: auto;
-
-    @media (min-width: $tablet-width) {
-      width: 32px;
-    }
-  }
+  stroke: $icons-fill-color;
 
   &_ig {
-    transform: translateX(2px);
-    width: 16px;
+    transform: translateX(3px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .socials__icon {
     height: auto;
 
-    @media (min-width: $tablet-width) {
+    &_vk {
+      width: 31px;
+    }
+
+    &_ig {
       width: 23px;
     }
-  }
 
-  &_fb {
-    fill: none;
-    stroke: $icons-fill-color;
-    width: 11px;
-    height: auto;
-
-    @media (min-width: $tablet-width) {
+    &_fb {
       width: 17px;
     }
   }
