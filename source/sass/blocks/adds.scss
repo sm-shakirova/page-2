@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 85px;
+  }
 }
 
 .adds__wrapper {
@@ -22,7 +26,7 @@
   width: max-content;
   padding: 0 20px;
   transform: translateX(-20px);
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     @include title-font(36px, 36px);
@@ -45,10 +49,10 @@
 }
 
 .adds__list {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,7 +66,7 @@
     "product product"
     "size price"
     "button button";
-  padding: 13px 0 19px;
+  padding: 13px 0 17px;
   border-bottom: 1px solid $control-mark-color;
 
   @media (min-width: $tablet-width) {
@@ -78,7 +82,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-areas: "product size price button";
-    grid-template-columns: 1fr 200px 155px 282px;
+    grid-template-columns: 1fr 190px 100px 282px;
     padding: 15px 0 16px;
     border-right: none;
     border-left: none;
@@ -100,6 +104,10 @@
     @include title-font(20px, 20px);
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+  }
 }
 
 .adds__size,
@@ -118,7 +126,7 @@
     margin-left: auto;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-left: 0;
   }
 }
@@ -126,6 +134,10 @@
 .adds__price {
   grid-area: price;
   margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 30px;
+  }
 }
 
 .adds__button {
@@ -135,6 +147,10 @@
   grid-area: button;
   width: 100%;
   margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 244px;

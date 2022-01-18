@@ -20,12 +20,12 @@
     display: grid;
     align-items: center;
     grid-template-columns: 220px auto;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
-    margin-top: 47px;
+    margin-top: 42px;
   }
 }
 
@@ -79,7 +79,8 @@
 
 .header__logo_text-only {
   justify-self: center;
-  padding-top: 2px;
+  padding-top: 5px;
+  padding-left: 5px;
 
   @media (min-width: $tablet-width) {
     display: none;

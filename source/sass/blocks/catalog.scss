@@ -1,9 +1,9 @@
 .catalog {
   @include wrapper;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,13 +21,14 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 65px;
   }
 }
 
 .catalog__item {
   @include dividing-line-after;
-  padding: 19px 0 25px;
+  padding: 19px 0 24px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
