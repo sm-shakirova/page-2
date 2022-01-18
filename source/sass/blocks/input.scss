@@ -8,7 +8,9 @@
   border: 1px solid $input-border-color;
 
   @media (min-width: $tablet-width) {
+    @include title-font(20px, 30px);
     height: 52px;
+    padding: 17px;
   }
 
   &::placeholder {
@@ -18,9 +20,11 @@
   &_textarea {
     width: 100%;
     height: 150px;
+    padding: 13px;
 
     @media (min-width: $tablet-width) {
       height: 174px;
+      padding: 10px 18px;
     }
   }
 
@@ -30,18 +34,15 @@
 
   &:focus {
     border: 2px solid $base-font-color;
-    padding: 14px;
     outline: none;
   }
 
   &:active {
     border: 2px solid $base-font-color;
-    padding: 14px;
   }
 
   &_error {
     border: 2px solid $status-error;
-    padding: 14px;
 
     & + .input__icon {
       fill: $status-error;
@@ -52,6 +53,7 @@
 
 .input_with-icon {
   padding-right: 45px;
+  margin-left: -4px;
 
   &:focus {
     padding-right: 45px;
@@ -60,6 +62,10 @@
   &:focus + .input__icon {
     fill: $theme-color;
     stroke: $theme-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 2px;
   }
 }
 
@@ -100,9 +106,14 @@
 .input__label {
   @include title-font(16px, 18px);
   text-transform: uppercase;
-  margin-right: 13px;
+  margin-right: 14px;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    @include title-font(20px, 30px);
+    margin-right: 18px;
+  }
 }
 
 .input__control-mark {
@@ -119,11 +130,12 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
+      margin-right: 20px;
     }
   }
 
   &:hover::before,
-  &:hover::before {
+  &:focus::before {
     border: 1px solid $dark-border-color;
   }
 

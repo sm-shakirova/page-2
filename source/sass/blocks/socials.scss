@@ -1,7 +1,12 @@
 .socials {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 11px;
+  gap: 12px;
+
+  @media (min-width: $tablet-width) {
+    gap: 8px;
+    transform: translateX(-4px);
+  }
 }
 
 .socials__link {
@@ -37,8 +42,8 @@
   fill: $icons-fill-color;
   stroke: $icons-fill-color;
 
-  &_ig {
-    transform: translateX(3px);
+  &_vk {
+    transform: translateX(-3px);
   }
 }
 
@@ -56,6 +61,7 @@
 
     &_fb {
       width: 17px;
+      transform: translateX(-3px);
     }
   }
 }

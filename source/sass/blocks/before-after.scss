@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     width: 710px;
-    height: 590px;
+    height: 520px;
   }
 }
 
@@ -13,37 +13,41 @@
   @media (min-width: $tablet-width) {
     position: relative;
     overflow: hidden;
+  }
 
+  @media (min-width: $desktop-width) {
     &:nth-child(1) {
-      width: 50%;
+      width: 54%;
     }
 
     &:nth-child(2) {
-      width: 50%;
+      width: 46%;
     }
   }
 }
 
-.before-after__photo_before {
+.before-after__image_before {
   width: 100%;
+  transform: translateX(-5px);
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: -45px;
+    transform: none;
+    left: 15px;
     width: auto;
-    height: 590px;
+    height: 520px;
   }
 }
 
-.before-after__photo_after {
+.before-after__image_after {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    right: 25px;
+    right: 56px;
     width: auto;
-    height: 590px;
+    height: 520px;
   }
 }
 
@@ -51,8 +55,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto 0;
-  padding: 0 30px;
+  margin: 25px auto 0;
+  padding: 0 26px 0 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+    padding: 0 52px 0 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    padding: 0 20px 0 80px;
+  }
 }
 
 .before-after__button {
@@ -72,7 +86,8 @@
 
 @media (min-width: $tablet-width) {
   .before-after__button {
-    padding: 6px 20px;
+    @include title-font(20px, 30px);
+    padding: 4px 20px;
 
     &::after {
       content: "";

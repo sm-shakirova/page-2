@@ -2,9 +2,9 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Функциональное питание для котов "Кэт Энерджи"</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico" sizes="16x16" type="image/vnd.microsoft.icon">
   <link rel="icon" href="favicon@2x.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
@@ -74,15 +74,15 @@
           <span class="form__sub-title">Выбор программы</span>
         </legend>
         <ul>
-          <li class="form__item">
+          <li class="form__item form__item_control">
             <input class="input input_radio" id="program-slim" name="program-type" type="radio" value="slim" checked>
             <label class="input__label input__control-mark input__control-mark_radio" for="program-slim">Похудение</label>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item_control">
             <input class="input input_radio" id="program-pro" name="program-type" type="radio" value="pro">
             <label class="input__label input__control-mark input__control-mark_radio" for="program-pro">Набор массы</label>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item_control">
             <input class="input input_radio" id="program-need-help" name="program-type" type="radio" value="need-help">
             <label class="input__label  input__control-mark input__control-mark_radio" for="program-need-help">Не знаю (нужен ваш совет)</label>
           </li>
@@ -121,25 +121,25 @@
         <span class="form__sub-title">Дополнительно</span>
       </legend>
       <ul class="form__list">
-        <li class="form__item">
+        <li class="form__item form__item_control">
           <input class="input input_checkbox" id="add-sweetener" name="add" type="checkbox" value="sweetener" checked>
           <label class="input__label input__control-mark input__control-mark_checkbox" for="add-sweetener">
               Сахарозаменитель
           </label>
         </li>
-        <li class="form__item">
+        <li class="form__item form__item_control">
           <input class="input input_checkbox" id="add-water" name="add" type="checkbox" value="water">
           <label class="input__label input__control-mark input__control-mark_checkbox" for="add-water">
             Питьевая вода
           </label>
         </li>
-        <li class="form__item">
+        <li class="form__item form__item_control">
           <input class="input input_checkbox" id="add-milk" name="add" type="checkbox" value="milk">
           <label  class="input__label input__control-mark input__control-mark_checkbox" for="add-milk">
             Молоко
           </label>
         </li>
-        <li class="form__item">
+        <li class="form__item form__item_control">
           <input class="input input_checkbox" id="add-vitamins" name="add" type="checkbox" value="vitamins">
           <label class="input__label input__control-mark input__control-mark_checkbox" for="add-vitamins">
             Витамины
@@ -177,6 +177,9 @@
     </div>
     <div class="address__map">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/map/map.webp 1x, img/map/map@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
         <img src="img/map/map.jpg" srcset="img/map/map.jpg 1x, img/map/map@2x.jpg 2x" width="320" height="362" alt="Карта Санкт-Петербурга">
@@ -228,6 +231,6 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

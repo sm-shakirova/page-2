@@ -1,11 +1,11 @@
 .example {
   background-color: $block-background-color;
-  padding: 27px 0;
+  padding: 27px 0 30px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     background: linear-gradient(to top, $block-background-color 462px, $base-background-color 0);
-    padding-top: 44px;
+    padding: 44px 0 65px;
 
     &::before {
       content: "";
@@ -19,6 +19,7 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 0;
+    background: linear-gradient(to bottom, $base-background-color 180px, $block-background-color 0);
 
     &::before {
       display: none;
@@ -32,7 +33,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 70px;
   }
 }
 
@@ -57,40 +58,43 @@
 .example__title {
   @include title-font(36px, 40px);
   color: $title-font-color;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
     @include title-font(60px, 60px);
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 145px;
+    margin-bottom: 147px;
   }
 }
 
 .example__description {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     @include base-font(16px, 24px);
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 }
 
 .example__list {
-  margin-bottom: 25px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    margin-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 45px;
+    margin-right: 0;
   }
 }
 
@@ -99,12 +103,12 @@
   text-transform: uppercase;
   color: $title-font-color;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     @include title-font(20px, 20px);
     text-align: end;
-    margin: auto 0;
+    margin: auto 2px auto 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -124,16 +128,17 @@
   @media (min-width: $desktop-width) {
     text-align: center;
     margin-top: 0;
+    margin-left: 14px;
   }
 }
 
 .example__image {
   @media (min-width: $tablet-width) {
-    margin-top: 60px;
+    margin-top: 65px;
   }
 
   @media (min-width: $desktop-width) {
     transform: translate(40px, -42px);
-    margin-top: -42px;
+    margin-top: -15px;
   }
 }
