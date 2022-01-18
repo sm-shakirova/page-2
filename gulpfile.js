@@ -59,10 +59,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src(
-    "source/img/**/*.{png,jpg,svg}",
-    "!source/img/sprite/*.svg"
-  )
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -74,10 +71,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src(
-    "source/img/**/*.{png,jpg,svg}",
-    "!source/img/sprite/*.svg"
-  )
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(gulp.dest("build/img"))
 }
 
