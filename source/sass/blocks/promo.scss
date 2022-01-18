@@ -9,25 +9,24 @@
 
 .promo__wrapper {
   @include wrapper;
-  padding: 28px 0 22px;
+  padding: 25px 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     text-align: unset;
-    min-height: 862px;
-    padding: 52px 86px 512px;
+    min-height: 900px;
+    padding: 60px 100px 0;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 522px;
-    width: calc(50% - 30px);
     padding: 100px 80px 195px;
-    margin-bottom: 72px;
+    margin-bottom: 82px;
   }
 }
 
 .promo__title {
-  @include title-font(36px, 36px);
+  @include title-font;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -45,11 +44,6 @@
     @include title-font(20px, 20px);
     margin-bottom: 50px;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 50px;
-    margin-bottom: 54px;
-  }
 }
 
 .promo__image {
@@ -60,7 +54,7 @@
     position: absolute;
     z-index: -1;
     width: 709px;
-    bottom: 0;
+    bottom: 30px;
     right: 0;
     left: 0;
     margin: auto;
@@ -69,29 +63,20 @@
   @media (min-width: $desktop-width) {
     top: 0;
     left: 230px;
-    bottom: 40px;
     width: 552px;
   }
 }
 
 .promo__link {
-  @include button(11px, 26px);
+  @include button(14px, 26px);
   @include title-font(14px, 18px);
-  margin-top: 2px;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    @include button(17px, 27px);
     @include title-font(20px, 20px);
-    margin-top: 0;
-    margin-left: -4px;
     width: max-content;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 0;
   }
 }
 
@@ -103,15 +88,19 @@
   right: 0;
   z-index: -2;
   width: 100%;
-  height: 302px;
+  height: 300px;
   background-color: $theme-color;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 500px;
   background-position: center;
   background-image: url("../img/background/cat-photo.jpg");
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/cat-photo@2x.jpg");
+  }
+
+  @media (min-width: 500px) {
+    background-size: cover;
   }
 
   @media (min-width: $tablet-width) {
@@ -121,7 +110,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     width: 50%;
-    height: 695px;
+    height: 696px;
     top: $desktop-shift;
     background-position: left 50%;
     background-image: url("../img/background/cat-photo-desktop.jpg");

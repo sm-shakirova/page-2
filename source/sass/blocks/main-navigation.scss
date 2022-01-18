@@ -13,7 +13,6 @@
 }
 
 .main-navigation__toggle {
-  margin-top: 5px;
   width: 24px;
   height: 1.5px;
   background-color: $title-font-color;
@@ -48,7 +47,6 @@
 
 .main-navigation__list {
   @include dividing-line-before;
-  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -57,7 +55,6 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin-right: -16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -119,7 +116,7 @@
 
 .main-navigation__link {
   display: block;
-  padding: 22px 17px;
+  padding: 22px 18px 23px;
   cursor: pointer;
 
   &:hover {
@@ -135,3 +132,4 @@
     opacity: 0.3;
   }
 }
+
