@@ -7,22 +7,16 @@
     width: 710px;
     height: 520px;
   }
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(30px);
+  }
 }
 
 .before-after__photo {
   @media (min-width: $tablet-width) {
     position: relative;
     overflow: hidden;
-  }
-
-  @media (min-width: $desktop-width) {
-    &:nth-child(1) {
-      width: 54%;
-    }
-
-    &:nth-child(2) {
-      width: 46%;
-    }
   }
 }
 
@@ -36,6 +30,10 @@
     width: auto;
     height: 520px;
   }
+
+  @media (min-width: $desktop-width) {
+    left: -10px;
+  }
 }
 
 .before-after__image_after {
@@ -47,6 +45,10 @@
     right: 56px;
     width: auto;
     height: 520px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 86px;
   }
 }
 
