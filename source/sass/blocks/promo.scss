@@ -7,8 +7,7 @@
   }
 }
 
-.promo__wrapper {
-  @include wrapper;
+.promo__container {
   padding: 28px 0 22px;
   text-align: center;
 
@@ -20,7 +19,6 @@
 
   @media (min-width: $desktop-width) {
     min-height: 522px;
-    width: calc(50% - 30px);
     padding: 100px 80px 195px;
     margin-bottom: 72px;
   }
@@ -75,16 +73,10 @@
 }
 
 .promo__link {
-  @include button(11px, 26px);
-  @include title-font(14px, 18px);
   margin-top: 2px;
-  text-transform: uppercase;
-  text-align: center;
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    @include button(17px, 27px);
-    @include title-font(20px, 20px);
     margin-top: 0;
     margin-left: -4px;
     width: max-content;

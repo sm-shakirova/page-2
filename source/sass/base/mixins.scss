@@ -72,29 +72,6 @@
   }
 }
 
-// Button
-@mixin button($padding-x, $padding-y) {
-  display: inline-block;
-  color: $base-background-color;
-  background-color: $theme-color;
-  padding: $padding-x $padding-y;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $dark-theme-color;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: $dark-theme-color;
-  }
-
-  &:active {
-    background-color: $dark-theme-color;
-    color: rgba($base-background-color, 0.3);
-  }
-}
-
 // Wrapper
 @mixin wrapper {
   margin: 0 20px;
@@ -104,11 +81,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 110px;
-  }
-
-  @media (min-width: 1770px) {
-    width: 1660px;
+    width: 1220px;
     margin: 0 auto;
   }
 }

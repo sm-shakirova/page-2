@@ -1,5 +1,4 @@
 .adds {
-  @include wrapper;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
@@ -11,7 +10,7 @@
   }
 }
 
-.adds__wrapper {
+.adds__container {
   @include sub-title-line(14px);
 
   @media (min-width: $tablet-width) {
@@ -49,7 +48,7 @@
 }
 
 .adds__list {
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 67px;
@@ -66,7 +65,7 @@
     "product product"
     "size price"
     "button button";
-  padding: 13px 0 17px;
+  padding: 14px 0 17px;
   border-bottom: 1px solid $control-mark-color;
 
   @media (min-width: $tablet-width) {
@@ -83,7 +82,7 @@
   @media (min-width: $desktop-width) {
     grid-template-areas: "product size price button";
     grid-template-columns: 1fr 190px 100px 282px;
-    padding: 15px 0 16px;
+    padding: 15px 0 17px;
     border-right: none;
     border-left: none;
   }
@@ -141,15 +140,12 @@
 }
 
 .adds__button {
-  @include button(10px, 20px);
-  @include title-font(16px, 20px);
-  text-transform: uppercase;
   grid-area: button;
   width: 100%;
   margin-top: 15px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 24px;
+    margin-top: 25px;
   }
 
   @media (min-width: $desktop-width) {

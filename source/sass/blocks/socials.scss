@@ -42,7 +42,7 @@
   fill: $icons-fill-color;
   stroke: $icons-fill-color;
 
-  &_vk {
+  &--vk {
     transform: translateX(-3px);
   }
 }
@@ -51,15 +51,15 @@
   .socials__icon {
     height: auto;
 
-    &_vk {
+    &--vk {
       width: 31px;
     }
 
-    &_ig {
+    &--ig {
       width: 23px;
     }
 
-    &_fb {
+    &--fb {
       width: 17px;
       transform: translateX(-3px);
     }

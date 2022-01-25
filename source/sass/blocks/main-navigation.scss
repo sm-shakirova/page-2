@@ -1,5 +1,5 @@
 .main-navigation {
-  &_closed {
+  &--closed {
     display: none;
 
     @media (min-width: $tablet-width) {
@@ -7,42 +7,8 @@
     }
   }
 
-  &_nojs {
+  &--no-js {
     display: block;
-  }
-}
-
-.main-navigation__toggle {
-  margin-top: 5px;
-  width: 24px;
-  height: 1.5px;
-  background-color: $title-font-color;
-  box-shadow: 0 -8px 0 0 $title-font-color,
-    0 8px 0 0 $title-font-color;
-
-  &_close,
-  &_nojs {
-    width: 25px;
-    box-shadow: none;
-    transform: rotate(47deg);
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $title-font-color;
-      transform: rotate(88deg);
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -63,7 +29,7 @@
   @media (min-width: $desktop-width) {
     color: $base-background-color;
 
-    &_inner {
+    &--inner {
       color: $title-font-color;
     }
   }
@@ -80,11 +46,11 @@
   }
 }
 
-.main-navigation__list_inner .main-navigation__item:last-child::after {
+.main-navigation__list--inner .main-navigation__item:last-child::after {
   display: none;
 }
 
-.main-navigation__item_current {
+.main-navigation__item--current {
   position: relative;
 
   &::before {
@@ -105,7 +71,7 @@
     }
   }
 
-  .main-navigation__list_inner &::before {
+  .main-navigation__list--inner &::before {
     @media (min-width: $desktop-width) {
       background-color: $theme-color;
     }

@@ -8,7 +8,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 430px;
-    padding: 0 36px 40px;
+    padding: 0 36px 43px;
     margin-top: 81px;
     background-color: $footer-background-color;
     grid-template-areas:
@@ -18,7 +18,11 @@
     grid-template-columns: unset;
   }
 
-  &_show-more {
+  @media (min-width: $desktop-width) {
+    padding: 0 36px 40px;
+  }
+
+  &--show-more {
     grid-template-areas:
       "info"
       "button";
@@ -27,6 +31,7 @@
     @media (min-width: $tablet-width) {
       background-color: $base-background-color;
       border: 2px solid $footer-background-color;
+      padding-bottom: 40px;
     }
   }
 }
@@ -187,26 +192,11 @@
 }
 
 .product-card__button {
-  @include button(10px, 20px);
-  @include title-font(16px, 20px);
-  text-transform: uppercase;
   grid-area: button;
   margin-top: 14px;
   align-self: end;
-}
 
-.product-card__button_show-more {
-  background-color: $footer-background-color;
-  color: $base-font-color;
-  margin-top: 11px;
-
-  &:hover,
-  &:focus {
-    background-color: $secondary-button-color;
-  }
-
-  &:active {
-    background-color: $secondary-button-color;
-    color: rgba($base-font-color, 0.3);
+  &--show-more {
+    margin-top: 11px;
   }
 }

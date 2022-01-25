@@ -1,5 +1,4 @@
 .catalog {
-  @include wrapper;
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
@@ -28,7 +27,7 @@
 
 .catalog__item {
   @include dividing-line-after;
-  padding: 19px 0 24px;
+  padding: 20px 0 24px;
 
   @media (min-width: $tablet-width) {
     padding: 0;

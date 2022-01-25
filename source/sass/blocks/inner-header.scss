@@ -1,5 +1,4 @@
 .inner-header {
-  @include wrapper;
   @include dividing-line-before;
   color: $title-font-color;
   padding-top: 26px;
@@ -10,7 +9,7 @@
     margin-bottom: 66px;
     padding: 0 40px;
 
-    &_catalog {
+    &--catalog {
       padding: 0;
       margin-bottom: 85px;
     }

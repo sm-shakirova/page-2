@@ -2,8 +2,7 @@
   background-color: $footer-background-color;
 }
 
-.footer__block {
-  @include wrapper;
+.footer__container {
   display: grid;
   grid-template-rows: 87px 63px 78px;
   align-items: end;
@@ -76,22 +75,6 @@
   }
 }
 
-.footer__logo-link {
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    opacity: 0.8;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-}
 
 .footer__icon {
   fill: $icons-fill-color;

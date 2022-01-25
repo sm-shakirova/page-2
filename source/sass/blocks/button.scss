@@ -1,0 +1,59 @@
+.button {
+  @include title-font(16px, 16px);
+  padding: 12px 11px 11px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  color: $base-background-color;
+  background-color: $theme-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-theme-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $dark-theme-color;
+  }
+
+  &:active {
+    background-color: $dark-theme-color;
+    color: rgba($base-background-color, 0.3);
+  }
+}
+
+.button--size {
+  &--small {
+    @include title-font(14px, 14px);
+    padding: 13px;
+
+    @media (min-width: $tablet-width) {
+      @include title-font(20px, 20px);
+      padding: 17px 27px;
+    }
+  }
+
+  &--large {
+    @media (min-width: $tablet-width) {
+      @include title-font(20px, 20px);
+      padding: 16px;
+    }
+  }
+}
+
+.button--secondary {
+  background-color: $footer-background-color;
+  color: $base-font-color;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-button-color;
+  }
+
+  &:active {
+    background-color: $secondary-button-color;
+    color: rgba($base-font-color, 0.3);
+  }
+}
+

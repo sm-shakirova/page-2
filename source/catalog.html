@@ -10,28 +10,26 @@
   <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
 </head>
 <body class="page__body">
-<header class="header header__wrapper">
-  <div class="header__block header__block_inner">
-    <a class="header__logo" href="index.html">
+<header class="header page-wrapper">
+  <div class="header__container">
+    <a class="logo logo--divided" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
-        <img src="img/logo/logo-mobile.svg" width="33" height="37" alt="Кэт Энерджи">
+        <img class="logo__image" src="img/logo/logo-mobile.svg" width="33" height="37" alt="Кэт Энерджи">
       </picture>
+      <img class="logo__text" src="img/logo/logo-text-only.svg" width="101" height="18" alt="Кэт Энерджи">
     </a>
-    <a class="header__logo_text-only">
-      <img src="img/logo/logo-text-only.svg" width="101" height="18" alt="Кэт Энерджи">
-    </a>
-    <button class="header__toggle main-navigation__toggle main-navigation__toggle_nojs" type="button">
+    <button class="header__toggle toggle toggle--closed" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
   </div>
-  <nav class="header__navigation main-navigation main-navigation_closed main-navigation_nojs">
-    <ul class="main-navigation__list main-navigation__list_inner">
+  <nav class="header__navigation main-navigation main-navigation--closed main-navigation--no-js">
+    <ul class="main-navigation__list main-navigation__list--inner">
       <li class="main-navigation__item">
         <a class="main-navigation__link" href="index.html">Главная</a>
       </li>
-      <li class="main-navigation__item main-navigation__item_current">
+      <li class="main-navigation__item main-navigation__item--current">
         <a class="main-navigation__link" href="#">Каталог продукции</a>
       </li>
       <li class="main-navigation__item">
@@ -40,11 +38,11 @@
     </ul>
   </nav>
 </header>
-<main class="main">
-  <header class="inner-header inner-header_catalog">
+<main>
+  <header class="inner-header inner-header--catalog page-wrapper">
     <h1 class="inner-header__title">Каталог продукции</h1>
   </header>
-  <section class="catalog">
+  <section class="catalog page-wrapper">
     <h2 class="visually-hidden">Список товаров</h2>
     <ul class="catalog__list">
       <li class="catalog__item product-card">
@@ -73,7 +71,7 @@
             </tr>
           </table>
         </div>
-        <button class="product-card__button">Заказать</button>
+        <button class="product-card__button button">Заказать</button>
       </li>
       <li class="catalog__item product-card">
         <div class="product-card__container">
@@ -101,7 +99,7 @@
             </tr>
           </table>
         </div>
-        <button class="product-card__button">Заказать</button>
+        <button class="product-card__button button">Заказать</button>
       </li>
       <li class="catalog__item product-card">
         <div class="product-card__container">
@@ -129,7 +127,7 @@
           </tr>
         </table>
         </div>
-        <button class="product-card__button">Заказать</button>
+        <button class="product-card__button button">Заказать</button>
       </li>
       <li class="catalog__item product-card">
         <div class="product-card__container">
@@ -243,17 +241,17 @@
           </div>
         <button class="product-card__button button">Заказать</button>
       </li>
-      <li class="catalog__item product-card product-card_show-more">
+      <li class="catalog__item product-card product-card--show-more">
         <div class="product-card__info product-card__info_show-more">
           <h3 class="product-card__title product-card__title_show-more">Показать еще<br> 100500 товаров</h3>
           <p class="product-card__description product-card__description_show-more">На самом деле вкусов<br> гораздо больше!</p>
         </div>
-        <button class="product-card__button product-card__button_show-more">Показать все</button>
+        <button class="product-card__button product-card__button--show-more button button--secondary">Показать все</button>
       </li>
     </ul>
   </section>
-  <section class="adds">
-    <div class="adds__wrapper">
+  <section class="adds page-wrapper">
+    <div class="adds__container">
       <h2 class="adds__title">Дополнительные товары</h2>
     </div>
     <div class="adds__block">
@@ -262,25 +260,25 @@
           <h3 class="adds__product-name">Сахарозаменитель</h3>
           <p class="adds__size">1 упаковка (100 г)</p>
           <p class="adds__price">200 Р.</p>
-          <button class="adds__button">Заказать</button>
+          <button class="adds__button button">Заказать</button>
         </li>
         <li class="adds__item">
           <h3 class="adds__product-name">Питьевая вода</h3>
           <p class="adds__size">5 литров</p>
           <p class="adds__price">50 Р.</p>
-          <button class="adds__button">Заказать</button>
+          <button class="adds__button button">Заказать</button>
         </li>
         <li class="adds__item">
           <h3 class="adds__product-name">Молоко</h3>
           <p class="adds__size">1 литр</p>
           <p class="adds__price">100 Р.</p>
-          <button class="adds__button">Заказать</button>
+          <button class="adds__button button">Заказать</button>
         </li>
         <li class="adds__item">
           <h3 class="adds__product-name">Витамины</h3>
           <p class="adds__size">1 упаковка (30 г)</p>
           <p class="adds__price">300 Р.</p>
-          <button class="adds__button">Заказать</button>
+          <button class="adds__button button">Заказать</button>
         </li>
       </ul>
       <aside class="bonus">
@@ -297,9 +295,9 @@
   </section>
 </main>
 <footer class="footer">
-  <div class="address address_inner">
-    <div class="address__wrapper">
-      <div class="address__content address__content_inner">
+  <div class="address address--inner">
+    <div class="address__container page-wrapper">
+      <div class="address__content address__content--inner">
         <div class="address__block">
           <p class="address__intro">
             Приглашаем<br>
@@ -325,14 +323,14 @@
         <source type="image/webp" srcset="img/map/map.webp 1x, img/map/map@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-        <img src="img/map/map.jpg" srcset="img/map/map.jpg 1x, img/map/map@2x.jpg 2x" width="320" height="362" alt="Карта Санкт-Петербурга" loading="lazy">
+        <img class="address__image" src="img/map/map.jpg" srcset="img/map/map.jpg 1x, img/map/map@2x.jpg 2x" width="320" height="362" alt="Карта Санкт-Петербурга" loading="lazy">
       </picture>
     </div>
   </div>
-  <div class="footer__block">
+  <div class="footer__container page-wrapper">
     <div class="footer__item">
-      <a class="footer__logo-link" href="index.html">
-        <img class="footer__logo" src="img/logo/logo-text-only.svg" width="128" height="24" alt="Кэт Энерджи">
+      <a class="logo" href="index.html">
+        <img src="img/logo/logo-text-only.svg" width="128" height="24" alt="Кэт Энерджи">
       </a>
     </div>
     <div class="footer__item">
@@ -340,7 +338,7 @@
         <li>
           <a class="socials__link" href="#">
             <span class="visually-hidden">ВКонтакте</span>
-            <svg class="socials__icon socials__icon_vk" width="23" height="16" aria-label="Иконка ВКонтакте" focusable="false">
+            <svg class="socials__icon socials__icon--vk" width="23" height="16" aria-label="Иконка ВКонтакте" focusable="false">
               <use xlink:href="img/sprite.svg#socials-vk"></use>
             </svg>
           </a>
@@ -348,7 +346,7 @@
         <li>
           <a class="socials__link" href="#">
             <span class="visually-hidden">Инстаграм</span>
-            <svg class="socials__icon socials__icon_ig" width="16" height="16" aria-label="Иконка Инстаграм" focusable="false">
+            <svg class="socials__icon socials__icon--ig" width="16" height="16" aria-label="Иконка Инстаграм" focusable="false">
               <use xlink:href="img/sprite.svg#socials-ig"></use>
             </svg>
           </a>
@@ -356,7 +354,7 @@
         <li>
           <a class="socials__link" href="#">
             <span class="visually-hidden">Фейсбук</span>
-            <svg class="socials__icon socials__icon_fb" width="12" height="21" aria-label="Иконка Фейсбук" focusable="false">
+            <svg class="socials__icon socials__icon--fb" width="12" height="21" aria-label="Иконка Фейсбук" focusable="false">
               <use xlink:href="img/sprite.svg#socials-fb"></use>
             </svg>
           </a>

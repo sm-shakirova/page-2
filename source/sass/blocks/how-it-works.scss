@@ -1,5 +1,4 @@
 .how-it-works {
-  @include wrapper;
   margin-bottom: 42px;
 
   @media (min-width: $tablet-width) {
@@ -73,22 +72,22 @@
     }
   }
 
-  &_leaf::before {
+  &--leaf::before {
     background-image: url("../img/tabs/icon-leaf.svg");
     background-size: 30px 32px;
   }
 
-  &_tub::before {
+  &--tub::before {
     background-image: url("../img/tabs/icon-tub.svg");
     background-size: 29px 31px;
   }
 
-  &_eat::before {
+  &--eat::before {
     background-image: url("../img/tabs/icon-eat.svg");
     background-size: 25px 30px;
   }
 
-  &_alarm::before {
+  &--alarm::before {
     background-image: url("../img/tabs/icon-alarm.svg");
     background-size: 32px 33px;
   }

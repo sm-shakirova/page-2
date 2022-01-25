@@ -20,15 +20,20 @@
   }
 }
 
-.before-after__image_before {
+.before-after__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    height: 520px;
+    width: auto;
+  }
+}
+
+.before-after__image--before {
   transform: translateX(-5px);
 
   @media (min-width: $tablet-width) {
-    position: absolute;
     transform: none;
     left: 15px;
-    width: auto;
-    height: 520px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,15 +41,12 @@
   }
 }
 
-.before-after__image_after {
+.before-after__image--after {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
-    position: absolute;
     right: 56px;
-    width: auto;
-    height: 520px;
   }
 
   @media (min-width: $desktop-width) {
