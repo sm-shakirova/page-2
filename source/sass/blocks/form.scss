@@ -11,7 +11,9 @@
 }
 
 .form__block {
-  margin-bottom: 25px;
+  margin: 0 0 25px;
+  padding: 0;
+  border: none;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
@@ -49,7 +51,7 @@
 
   &--comment {
     margin-bottom: 26px;
-    margin-top: -12px;
+    margin-top: -15px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 66px;
@@ -63,13 +65,10 @@
   }
 }
 
-.form__container {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 80px;
-  }
+.form__sub-block {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .form__sub-block:nth-child(1) {
@@ -105,19 +104,33 @@
 }
 
 .form__list {
-  margin-top: -3px;
+  padding-left: 0;
+  margin: 0;
 
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
-    row-gap: 20px;
-    margin-top: -18px;
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 80px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 80px;
+  &--adds {
+    margin-top: -3px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
+      row-gap: 20px;
+      margin-top: -18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
+    }
   }
 }
 
@@ -157,14 +170,14 @@
 }
 
 .form__item {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+  }
 
-    &--control {
-      margin-bottom: 13px;
-    }
+  &--control {
+    margin-bottom: 13px;
   }
 }
 
@@ -189,16 +202,16 @@
 .form__info {
   color: $title-font-color;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 21px;
 
   @media (min-width: $tablet-width) {
     @include base-font(16px, 16px);
     text-align: unset;
-    margin-top: -5px;
+    margin-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
+    margin-top: 15px;
     margin-left: 10px;
   }
 }

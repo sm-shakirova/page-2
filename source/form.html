@@ -52,7 +52,7 @@
         <legend class="visually-hidden">
           <span class="form__sub-title">Параметры кота</span>
         </legend>
-        <ul>
+        <ul class="form__list">
           <li class="form__item input">
             <label class="input__label" for="cat-name">Имя:*</label>
             <input class="input__field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
@@ -71,7 +71,7 @@
         <legend class="visually-hidden">
           <span class="form__sub-title">Выбор программы</span>
         </legend>
-        <ul>
+        <ul class="form__list">
           <li class="form__item form__item--control input">
             <input class="input__field input__field--radio" id="program-slim" name="program-type" type="radio" value="slim" checked>
             <span class="input__control-mark input__control-mark--radio"></span>
@@ -94,7 +94,7 @@
       <legend class="form__legend">
         <span class="form__sub-title form__sub-title--long">Контактные данные (владельца кота)</span>
       </legend>
-      <ul class="form__container">
+      <ul class="form__list form__list--contacts">
         <li class="form__item input">
           <label class="input__label" for="email">E-mail:*</label>
           <input class="input__field input__field--with-icon" id="email" name="email" type="email" placeholder="кuklachev@gmail.com" required>
@@ -123,7 +123,7 @@
       <legend class="form__legend">
         <span class="form__sub-title">Дополнительно</span>
       </legend>
-      <ul class="form__list">
+      <ul class="form__list form__list--adds">
         <li class="form__item form__item--control input">
           <input class="input__field input__field--checkbox" id="add-sweetener" name="add" type="checkbox" value="sweetener" checked>
           <span class="input__control-mark input__control-mark--checkbox"></span>
@@ -175,14 +175,7 @@
       </div>
     </div>
     <div class="address__map">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/map/map.webp 1x, img/map/map@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-        <img class="address__image" src="img/map/map.jpg" srcset="img/map/map.jpg 1x, img/map/map@2x.jpg 2x" width="320" height="362" alt="Карта Санкт-Петербурга" loading="lazy">
-      </picture>
+      <iframe class="address__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716230436!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1643210150154!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
   <div class="footer__container page-wrapper">

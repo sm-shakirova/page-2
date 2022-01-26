@@ -23,6 +23,7 @@
 
 .inner-header__title {
   @include title-font;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     @include title-font(60px, 60px);
@@ -32,12 +33,10 @@
 .inner-header__description {
   @include title-font(14px, 18px);
   text-transform: uppercase;
-  margin-top: 35px;
-  padding-bottom: 2px;
+  margin: 35px 0 0;
 
   @media (min-width: $tablet-width) {
     @include title-font(20px, 30px);
     margin-top: 55px;
-    padding-bottom: 0;
   }
 }

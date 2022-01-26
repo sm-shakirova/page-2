@@ -1,5 +1,6 @@
 .button {
   @include title-font(16px, 16px);
+  border: none;
   padding: 12px 11px 11px;
   text-transform: uppercase;
   text-align: center;
@@ -56,4 +57,3 @@
     color: rgba($base-font-color, 0.3);
   }
 }
-

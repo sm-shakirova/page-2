@@ -14,7 +14,9 @@
 
 .main-navigation__list {
   @include dividing-line-before;
+  padding-left: 0;
   margin-top: 5px;
+  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -84,6 +86,7 @@
 }
 
 .main-navigation__link {
+  color: inherit;
   display: block;
   padding: 22px 17px;
   cursor: pointer;

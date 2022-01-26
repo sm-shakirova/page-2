@@ -56,11 +56,11 @@
 .example__title {
   @include title-font(36px, 40px);
   color: $title-font-color;
-  margin-bottom: 33px;
+  margin: 0 0 33px;
 
   @media (min-width: $tablet-width) {
     @include title-font(60px, 60px);
-    margin-bottom: 62px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,7 +69,7 @@
 }
 
 .example__description {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 
   @media (min-width: $tablet-width) {
     @include base-font(16px, 24px);

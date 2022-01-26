@@ -14,6 +14,22 @@
 }
 
 .before-after__photo {
+  &:first-child {
+    transform: translateX(calc(50% - 145px));
+
+    @media (min-width: $tablet-width) {
+      transform: none;
+    }
+  }
+
+  &:last-child {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
     overflow: hidden;
@@ -21,6 +37,8 @@
 }
 
 .before-after__image {
+  max-width: unset;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     height: 520px;
@@ -29,8 +47,6 @@
 }
 
 .before-after__image--before {
-  transform: translateX(-5px);
-
   @media (min-width: $tablet-width) {
     transform: none;
     left: 15px;
